@@ -5,6 +5,9 @@ __author__ = 'sungshine'
 import os
 import sys
 import subprocess
+import getopt
+
+getopt.getopt(
 
 inputDirectory = "/home/biol8803b/data";
 paths = [os.path.join(inputDirectory,fn) for fn in next(os.walk(inputDirectory))[2]]
