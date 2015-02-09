@@ -23,6 +23,9 @@ def parseOpts(argv):
         elif opt in ('i')
             inputDirectory = arg
 
+if __name__ == "__parseOpts__":
+    parseOpts(sys.argv[1:])
+    
 paths = [os.path.join(inputDirectory,fn) for fn in next(os.walk(inputDirectory))[2]]
 
 #Invokes fastqc on raw read files passing in the files in as an argument
