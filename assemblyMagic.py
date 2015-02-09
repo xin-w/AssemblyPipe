@@ -10,21 +10,17 @@ import getopt
 inputDirectory = '' #raw reads directory
 
 #parse command line options
-def parseOpts(argv):
-    try:
-        opts, args = getopt.getopt(argv, "hi:")
-    except getopt.GetoptError:
+try:
+    opts, args = getopt.getopt(argv, "hi:")
+except getopt.GetoptError:
+    print 'usage: ./assemblyMagic.py -i <Raw reads Directory>\n'
+    sys.exit()
+for opt, arg in opts:
+    if opt == 'h':
         print 'usage: ./assemblyMagic.py -i <Raw reads Directory>\n'
         sys.exit()
-    for opt, arg in opts:
-        if opt == 'h':
-            print 'usage: ./assemblyMagic.py -i <Raw reads Directory>\n'
-            sys.exit()
-        elif opt in ('i')
-            inputDirectory = arg
-
-if __name__ == "__parseOpts__":
-    parseOpts(sys.argv[1:])
+    elif opt in ('i')
+        inputDirectory = arg
     
 paths = [os.path.join(inputDirectory,fn) for fn in next(os.walk(inputDirectory))[2]]
 
