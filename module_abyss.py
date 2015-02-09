@@ -5,8 +5,8 @@ import sys
 import subprocess
 import re
 
-inputDirectory = '/home/biol8803b/tmp'
-outputDirectory = '/home/biol8803b/assemblies'
+inputDirectory = '/home/biol8803b/tmp/'
+outputDirectory = '/home/biol8803b/assemblies/'
 
 paths = [os.path.join(inputDirectory,fn) for fn in next(os.walk(inputDirectory))[2]]
 
