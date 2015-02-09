@@ -10,7 +10,7 @@ import getopt
 inputDirectory = '' #raw reads directory
 
 #parse command line options
-def parse(argv):
+def parseOpts(argv):
     try:
         opts, args = getopt.getopt(argv, "hi:")
     except getopt.GetoptError:
